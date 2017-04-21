@@ -4,7 +4,7 @@ Building front-end web project fast.
 
 ## Setup
  - Just run npm install --only=dev in your cmd to install all require packages. Please see package.json file to see all require packages.
- - Change the project name that you desire at the 'gulpfile.config.js', just change the value of basedir.
+ - Change the basedir at the 'gulpfile.config.js', just change the value of basedir.
 
 ### Development Command
  - `gulp sass`
