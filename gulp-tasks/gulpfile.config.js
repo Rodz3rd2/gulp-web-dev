@@ -1,7 +1,8 @@
 module.exports = {
-	basedir: "project",
+	basedir: "public",
 
-	sassdir: "project/sass",
-	cssdir: "project/css",
-	phpdir: "project",
+	sassdir: "resources/sass",
+	cssdir: "public/css",
+	// phpdir: "resources/useref/phpdir",
+	twigdir: "resources/views"
 };

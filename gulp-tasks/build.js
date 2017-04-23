@@ -21,7 +21,7 @@ var settings = require("./gulpfile.config.js");
 
 function bundledAsset ()
 {
-	return gulp.src(settings.phpdir + "/**/*.php")
+	return gulp.src(settings.twigdir + "/**/*.twig")
 			.pipe(useref())
 			.pipe(gulpIf('*.js', uglify()))
 			.pipe(gulpIf('*.css', cssnano()))
