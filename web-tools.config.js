@@ -1,6 +1,7 @@
 // these are relative at the location of gulpfile.js.
 module.exports = {
     tasks_dir: "./tasks",
+    debug: false,
 
     sass: {
         command: "sass",

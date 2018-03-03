@@ -1,11 +1,11 @@
 var gulp = require("gulp"),
+    config = require("./web-tools.config"),
     plugins = require("gulp-load-plugins")({
-        DEBUG: true,
+        DEBUG: config.debug,
         rename: {
             'gulp-merge-media-queries': "mmq"
         }
-    }),
-    config = require("./web-tools.config");
+    });
 
 function getTask(task) {
     return require(config.tasks_dir + "/" + task)(gulp, plugins, config);
