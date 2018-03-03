@@ -7,5 +7,8 @@ Version 2.0.0
 Version 2.0.1
 * Fix build:dist command.
 
-Versio 2.1.0
+Version 2.1.0
 * Add feature webpack.
+
+Version 2.2.0
+* Allow to change debug mode.

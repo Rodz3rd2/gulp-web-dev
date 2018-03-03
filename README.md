@@ -1,4 +1,4 @@
-# Web Tools (v2.1.0)
+# Web Tools (v2.2.0)
 Tools for watching sass and js. Compress your css and js files. Optimize file size of images. Move all fonts at the one location.
 
 ## Installation
