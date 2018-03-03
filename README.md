@@ -1,4 +1,4 @@
-# Web Tools (v2.0.1)
+# Web Tools (v2.1.0)
 Tools for watching sass and js. Compress your css and js files. Optimize file size of images. Move all fonts at the one location.
 
 ## Installation
@@ -66,7 +66,9 @@ console.log("I am app.js");
 
 app2.js
 ```js
-console.log("I am app2.js");
+import _ from 'lodash';
+
+console.log(_.max([6,7,4,2]));
 ```
 
 app.scss
@@ -87,7 +89,8 @@ p {
 a.jpg
 - Just add image in app/src/img folder and name it a.jpg
 
-After all of those setup, run command `gulp build:dist`. It would be create dist folder. That's it!
+After all of those setup, run command `gulp build:dist`. It would be create dist folder.
+Test it by opening the dist/app.html in browser. That's it!.
 
 ## LICENSE
 Web Tools is released under the MIT Licence.

@@ -1,3 +1,6 @@
+var named = require("vinyl-named"),
+    webpack = require("webpack-stream");
+
 module.exports = function (gulp, plugins, config) {
     return function () {
         var sources = [];
@@ -12,6 +15,8 @@ module.exports = function (gulp, plugins, config) {
                         this.emit("end");
                     }
                 }))
+                .pipe(named())
+                .pipe(webpack())
                 .pipe(gulp.dest(config.scripts.dest));
     };
 };
