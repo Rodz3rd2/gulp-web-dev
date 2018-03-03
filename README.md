@@ -1,4 +1,4 @@
-# Web Tools (v2.2.0)
+# Web Tools (v3.0.0)
 Tools for watching sass and js. Compress your css and js files. Optimize file size of images. Move all fonts at the one location.
 
 ## Installation
@@ -10,12 +10,12 @@ Tools for watching sass and js. Compress your css and js files. Optimize file si
  - `gulp sass:watch` - Same of `gulp sass` but it will watch it. It will compile while you changing the sass file.
  - `gulp scripts` - Compile js file.
  - `gulp scripts:watch` - Same of `gulp scripts` but it will watch it.
- - `gulp build:views` - Build views, uglify css and js and move it in dist folder
- - `gulp build:images` - Optimize the file size of image and move the output file in dist/img folder
+ - `gulp build:views` - Build views, uglify css and js and move it in dist folder.
+ - `gulp build:images` - Optimize the file size of image and move the output file in dist/img folder.
  - `gulp build:fonts` - Flatten the fonts and move it in dist/fonts folder.
 
  - `gulp watch` - Run commands `gulp sass:watch` and `gulp scripts:watch`.
- - `gulp delete:dist` - Remove folder dist folder.
+ - `gulp delete:dist` - Remove dist folder.
  - `gulp build:dist` - Run commands `gulp delete:dist`, `gulp sass`, `gulp scripts`, `gulp build:views`, `gulp build:images` and `gulp build:fonts`.
 
 ## Example

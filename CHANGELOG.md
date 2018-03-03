@@ -1,3 +1,8 @@
+Version 3.0.0
+* Publish this library to npm.
+* Create bin command web-tools.
+* Change main file from gulpfile.js to index.js.
+
 Version 2.2.0
 * Allow to change debug mode.
 

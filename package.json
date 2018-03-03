@@ -1,11 +1,13 @@
 {
   "name": "web-tools",
-  "version": "2.2.0",
+  "version": "3.0.0",
   "description": "Tools for watching sass and js. Compress your css and js files. Optimize file size of images. Move all fonts at the one location.",
-  "main": "gulpfile.js",
-  "dependencies": {},
+  "main": "index.js",
   "devDependencies": {
+    "commander": "^2.14.1",
     "del": "^2.2.2",
+    "fs": "0.0.1-security",
+    "fs-extra": "^5.0.0",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^3.1.1",
     "gulp-cache": "^0.4.6",
@@ -40,6 +42,9 @@
   ],
   "author": "rodrigogalura3rd@gmail.com",
   "license": "MIT",
+  "bin": {
+    "web-tools": "./index.js"
+  },
   "bugs": {
     "url": "https://github.com/Rodz3rd2/gulp-web-dev/issues"
   },
