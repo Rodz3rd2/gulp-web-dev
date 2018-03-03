@@ -1,25 +1,9 @@
 {
-  "name": "gulp-web-dev",
-  "version": "1.0.0",
-  "description": "Building front-end web project fast.",
+  "name": "web-tools",
+  "version": "2.0.0",
+  "description": "Tools for watching sass and js. Compress your css and js files. Optimize file size of images. Move all fonts at the one location.",
   "main": "gulpfile.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Rodz3rd2/gulp-web-dev.git"
-  },
-  "keywords": [
-    "web-dev",
-    "gulp"
-  ],
-  "author": "rodrigogalura3rd@gmail.com",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Rodz3rd2/gulp-web-dev/issues"
-  },
-  "homepage": "https://github.com/Rodz3rd2/gulp-web-dev#readme",
+  "dependencies": {},
   "devDependencies": {
     "del": "^2.2.2",
     "gulp": "^3.9.1",
@@ -30,12 +14,32 @@
     "gulp-flatten": "^0.3.1",
     "gulp-if": "^2.0.2",
     "gulp-imagemin": "^3.2.0",
+    "gulp-load-plugins": "^1.5.0",
     "gulp-merge-media-queries": "^0.2.1",
     "gulp-plumber": "^1.1.0",
     "gulp-sass": "^3.1.0",
     "gulp-uglify": "^2.1.2",
     "gulp-useref": "^3.1.2",
-    "require-dir": "^0.3.1",
     "run-sequence": "^1.2.2"
-  }
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Rodz3rd2/gulp-web-dev.git"
+  },
+  "keywords": [
+    "web-dev",
+    "gulp",
+    "tools",
+    "compress",
+    "optimize"
+  ],
+  "author": "rodrigogalura3rd@gmail.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Rodz3rd2/gulp-web-dev/issues"
+  },
+  "homepage": "https://github.com/Rodz3rd2/gulp-web-dev#readme"
 }

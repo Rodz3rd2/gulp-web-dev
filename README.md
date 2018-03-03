@@ -1,31 +1,93 @@
-# Development with Gulp
+# Web Tools (v2.0.0)
+Tools for watching sass and js. Compress your css and js files. Optimize file size of images. Move all fonts at the one location.
 
-Building front-end web project fast.
+## Installation
+ - Install development dependency inside of package.json using command `npm install`.
+ - Install `gulp-cli` globally if it is not already installed in your computer.
 
-## Setup
- - Just run npm install --only=dev in your cmd to install all require packages. Please see package.json file to see all require packages.
- - Set the config file at the 'gulpfile.config.js'. Make sure that the path you set is correct.
+## Commands
+ - `gulp sass` - Compile sass file to css file.
+ - `gulp sass:watch` - Same of `gulp sass` but it will watch it. It will compile while you changing the sass file.
+ - `gulp scripts` - Compile js file.
+ - `gulp scripts:watch` - Same of `gulp scripts` but it will watch it.
+ - `gulp build:views` - Build views, uglify css and js and move it in dist folder
+ - `gulp build:images` - Optimize the file size of image and move the output file in dist/img folder
+ - `gulp build:fonts` - Flatten the fonts and move it in dist/fonts folder.
 
-### Development Command
- - `gulp sass`
- 	Compile the sass file into css file and automatic comb your code and merge all media queries.
- 	Also have autoprefixer feature. For more info in autoprefixer, see https://www.npmjs.com/package/gulp-autoprefixer.
+ - `gulp watch` - Run commands `gulp sass:watch` and `gulp scripts:watch`.
+ - `gulp delete:dist` - Remove folder dist folder.
+ - `gulp build:dist` - Run commands `gulp delete:dist`, `gulp sass`, `gulp scripts`, `gulp build:views`, `gulp build:images` and `gulp build:fonts`.
 
- - `gulp sass-watch`
- 	Watch the sass command.
+## Example
+Follow the folder structure of this project
+```
+app/
+ |--src/
+    |--img/
+        |--a.jpg
+    |--js/
+        |--app.js
+        |--app2.js
+    |--sass
+        |--app.scss
+        |--app2.scss
+ |--app.html
+```
 
-### Build Command
- - `gulp useref`
- 	Bundle the css and js base on the code.
+app.html
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
 
- - `gulp optimize-images`
- 	Optimize images and store it into dist/img path.
+    <!-- build:css css/app.css -->
+    <link rel="stylesheet" type="text/css" href="./css/app.css">
+    <link rel="stylesheet" type="text/css" href="./css/app2.css">
+    <!-- endbuild -->
+</head>
+<body>
+    <p>Hello World</p>
+    <img src="./../dist/img/a.jpg" width="200">
 
- - `gulp flatten-fonts`
- 	Collect all fonts and store it into dist/fonts path without depth
+    <!-- build:js js/app.js -->
+    <script type="text/javascript" src="./js/app.js"></script>
+    <script type="text/javascript" src="./js/app2.js"></script>
+    <!-- endbuild -->
+</body>
+</html>
+```
 
- - `gulp delete-dist`
- 	Delete dist folder
+app.js
+```js
+console.log("I am app.js");
+```
 
- - `gulp build`
- 	Run 'delete-dist', 'useref', 'optimize-images', 'flatten-fonts' tasks respectively.
+app2.js
+```js
+console.log("I am app2.js");
+```
+
+app.scss
+```scss
+body {
+    background-color: blue;
+}
+```
+
+app2.scss
+```scss
+p {
+    color: green;
+    font-size: 20px;
+}
+```
+
+a.jpg
+- Just add image in app/src/img folder and name it a.jpg
+
+After all of those setup, run command `gulp build:dist`. It would be create dist folder. That's it!
+
+## LICENSE
+Web Tools is released under the MIT Licence.
