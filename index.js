@@ -5,16 +5,16 @@ var fse = require('fs-extra'),
 
 var webtools_path = "./";
 
-if (!fse.existsSync(webtools_path + "/web-tools.config.js")) {
+if (!fse.existsSync(webtools_path + "/web-dev-tools.config.js")) {
     // init config command
 
     var is_file_created = false;
     program
     .command('init')
-    .description("Create file web-tools.config.js.")
+    .description("Create file web-dev-tools.config.js.")
     .action(function () {
         try {
-            fse.copySync(webtools_path + "/web-tools.config.js.example", webtools_path + "/web-tools.config.js");
+            fse.copySync(webtools_path + "/web-dev-tools.config.js.example", webtools_path + "/web-dev-tools.config.js");
             is_file_created = true;
         } catch (err) {
             console.error(err);
@@ -22,12 +22,12 @@ if (!fse.existsSync(webtools_path + "/web-tools.config.js")) {
     });
     program.parse(process.argv);
 
-    console.log(is_file_created ? "Successfully created file web-tools.config.js." : "Error: web-tools.config.js file not found.\nTry `web-tools init` command.");
+    console.log(is_file_created ? "Successfully created file web-dev-tools.config.js." : "Error: web-dev-tools.config.js file not found.\nTry `web-dev-tools init` command.");
     return;
 }
 
 var gulpfile = require(webtools_path + "/gulpfile.js"),
-    config = require(webtools_path + "/web-tools.config.js");
+    config = require(webtools_path + "/web-dev-tools.config.js");
 
 // sass command
 program

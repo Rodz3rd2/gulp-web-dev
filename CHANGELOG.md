@@ -1,3 +1,6 @@
+Version 3.1.0
+* Rename library from web-tools to web-dev-tools because web-tools is already exist in npm registry.
+
 Version 3.0.0
 * Publish this library to npm.
 * Create bin command web-tools.

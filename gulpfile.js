@@ -1,5 +1,5 @@
 var gulp = require("gulp"),
-    config = require("./web-tools.config"),
+    config = require("./web-dev-tools.config"),
     plugins = require("gulp-load-plugins")({
         DEBUG: config.debug,
         rename: {

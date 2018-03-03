@@ -1,4 +1,4 @@
-# Web Tools (v3.0.0)
+# Web Tools Dev (v3.1.0)
 Tools for watching sass and js. Compress your css and js files. Optimize file size of images. Move all fonts at the one location.
 
 ## Installation
@@ -93,4 +93,4 @@ After all of those setup, run command `gulp build:dist`. It would be create dist
 Test it by opening the dist/app.html in browser. That's it!.
 
 ## LICENSE
-Web Tools is released under the MIT Licence.
+Web Dev Tools is released under the MIT Licence.
