@@ -1,3 +1,6 @@
+Version 3.1.5
+* Forgot to remove gulp-sass gulp-imagemin inside of package.json.
+
 Version 3.1.4
 * Fix bug when installing package.
 
