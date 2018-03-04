@@ -124,7 +124,6 @@ function includeConfigIfExist()
         gulpfile = require("./gulpfile");
         return true;
     } catch (err) {
-        console.log(err);
         return false;
     }
 }

@@ -1,12 +1,17 @@
-# Web Tools Dev (v3.1.3)
+# Web Tools Dev (v3.1.4)
 Tools for watching sass and js. Compress your css and js files. Optimize file size of images. Move all fonts at the one location.
 
 ## Installation
- - Install development dependency inside of package.json using command `npm install --unsafe-perm`. Option --unsafe-perm need of gulp-sass package. See <a href="https://github.com/dlmanning/gulp-sass/issues/652#issuecomment-362268260">https://github.com/dlmanning/gulp-sass/issues/652#issuecomment-362268260</a>
+ - Install development dependency inside of package.json using command `sudo npm install`.
  - Install `gulp-cli` and `npx` globally if it is not already installed in your computer.
 
+## Setup
+ - First you need to create file `web-dev-tools.config.js` to setup the path. Use build in command `npx web-dev-tools init`.
+ - Now check the available commands to know what can do of this library.
+ - Follow the step in 'Example' section below to know how it works.
+
 ## Commands
- - `npx web-dev-tools help` - Show command list.
+ - `npx web-dev-tools [-h|--help]` - Show command list.
  - `npx web-dev-tools init` - Create file web-dev-tools.config.js.
  - `npx web-dev-tools sass` - Compile sass file to css file.
  - `npx web-dev-tools sass:watch` - Same of `npx web-dev-tools sass` but it will watch it. It will compile while you changing the sass file.
@@ -16,7 +21,7 @@ Tools for watching sass and js. Compress your css and js files. Optimize file si
  - `npx web-dev-tools build:images` - Optimize the file size of image and move the output file in dist/img folder.
  - `npx web-dev-tools build:fonts` - Flatten the fonts and move it in dist/fonts folder.
 
- - `npx web-dev-tools watch` - Run commands `gulp sass:watch` and `gulp scripts:watch`.
+ - `npx web-dev-tools watch` - Run commands `npx web-dev-tools sass:watch` and `npx web-dev-tools scripts:watch`.
  - `npx web-dev-tools delete:dist` - Remove dist folder.
  - `npx web-dev-tools build:dist` - Run commands `npx web-dev-tools delete:dist`, `npx web-dev-tools sass`, `npx web-dev-tools scripts`, `npx web-dev-tools build:views`, `npx web-dev-tools build:images` and `npx web-dev-tools build:fonts`.
 
@@ -91,7 +96,7 @@ p {
 a.jpg
 - Just add image in app/src/img folder and name it a.jpg
 
-After all of those setup, run command `gulp build:dist`. It would be create dist folder.
+After all of those setup, run command `npx web-dev-tools build:dist`. It would be create dist folder.
 Test it by opening the dist/app.html in browser. That's it!.
 
 ## LICENSE

@@ -1,3 +1,6 @@
+Version 3.1.4
+* Fix bug when installing package.
+
 Version 3.1.3
 * Add jpegtran-bin as dependency.
 * Fix issue about installing package gulp-sass.
