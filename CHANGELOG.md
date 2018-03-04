@@ -1,3 +1,7 @@
+Version 3.1.3
+* Add jpegtran-bin as dependency.
+* Fix issue about installing package gulp-sass.
+
 Version 3.1.2
 * Move gulp-sass into devDependency to install it with option --unsave-perm because that package have issue.
 

@@ -1,6 +1,6 @@
 {
   "name": "web-dev-tools",
-  "version": "3.1.2",
+  "version": "3.1.3",
   "description": "Tools for watching sass and js. Compress your css and js files. Optimize file size of images. Move all fonts at the one location.",
   "main": "index.js",
   "dependencies": {
@@ -20,6 +20,7 @@
     "gulp-plumber": "^1.1.0",
     "gulp-uglify": "^2.1.2",
     "gulp-useref": "^3.1.2",
+    "jpegtran-bin": "^3.2.0",
     "run-sequence": "^1.2.2",
     "vinyl-named": "^1.1.0",
     "webpack-stream": "^4.0.2"

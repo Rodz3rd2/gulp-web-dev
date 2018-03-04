@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 
-const VERSION = "3.1.2";
+const VERSION = "3.1.3";
+const PROJECT_PATH = process.cwd();
 
 var fse = require('fs-extra'),
     program = require("commander");
@@ -13,7 +14,7 @@ program
 .description("Create file web-dev-tools.config.js.")
 .action(function () {
     try {
-        if (fse.existsSync("./web-dev-tools.config.js")) {
+        if (fse.existsSync(PROJECT_PATH + "/web-dev-tools.config.js")) {
             throw "web-dev-tools.config.js is already created.";
         }
     } catch (err) {
@@ -22,7 +23,7 @@ program
     }
 
     try {
-        fse.copySync("./web-dev-tools.config.js.example", "./web-dev-tools.config.js");
+        fse.copySync(__dirname + "/web-dev-tools.config.js.example", PROJECT_PATH + "/web-dev-tools.config.js");
         console.log("Successfully created file web-dev-tools.config.js.");
     } catch (err) {
         console.error(err);
@@ -119,10 +120,11 @@ if (!includeConfigIfExist()) {
 function includeConfigIfExist()
 {
     try {
-        config = require("./web-dev-tools.config");
+        config = require(PROJECT_PATH + "/web-dev-tools.config");
         gulpfile = require("./gulpfile");
         return true;
     } catch (err) {
+        console.log(err);
         return false;
     }
 }
