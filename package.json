@@ -1,6 +1,6 @@
 {
   "name": "web-dev-tools",
-  "version": "3.1.1",
+  "version": "3.1.2",
   "description": "Tools for watching sass and js. Compress your css and js files. Optimize file size of images. Move all fonts at the one location.",
   "main": "index.js",
   "dependencies": {

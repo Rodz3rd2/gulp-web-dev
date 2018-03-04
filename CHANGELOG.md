@@ -1,3 +1,9 @@
+Version 3.1.2
+* Move gulp-sass into devDependency to install it with option --unsave-perm because that package have issue.
+
+Version 3.1.1
+* Trying to fix bug when registering in npm.
+
 Version 3.1.0
 * Rename library from web-tools to web-dev-tools because web-tools is already exist in npm registry.
 

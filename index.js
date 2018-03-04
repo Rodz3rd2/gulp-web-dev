@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-const VERSION = "3.1.1";
+const VERSION = "3.1.2";
 
 var fse = require('fs-extra'),
     program = require("commander");
