@@ -1,6 +1,6 @@
 {
   "name": "web-dev-tools",
-  "version": "3.1.5",
+  "version": "3.1.6",
   "description": "Tools for watching sass and js. Compress your css and js files. Optimize file size of images. Move all fonts at the one location.",
   "main": "index.js",
   "dependencies": {
@@ -24,8 +24,7 @@
     "webpack-stream": "^4.0.2"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "postinstall": "npm install --save-dev --unsafe-perm gulp-sass gulp-imagemin"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
