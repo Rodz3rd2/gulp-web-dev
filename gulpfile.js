@@ -8,7 +8,7 @@ var gulp = require("gulp"),
     });
 
 function getTask(task) {
-    return require(process.cwd() + "/tasks/" + task)(gulp, plugins, config);
+    return require(__dirname + "/tasks/" + task)(gulp, plugins, config);
 }
 
 gulp.task(config.sass.command, getTask("sass"));

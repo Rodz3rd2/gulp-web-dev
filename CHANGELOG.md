@@ -1,3 +1,7 @@
+Version 3.1.8
+* Fix calling task.
+* Update README.md.
+
 Version 3.1.7
 * Fix not calling plugins.sass and plugins.imagemin.
 
