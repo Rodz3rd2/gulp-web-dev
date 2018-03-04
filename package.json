@@ -3,10 +3,9 @@
   "version": "3.1.0",
   "description": "Tools for watching sass and js. Compress your css and js files. Optimize file size of images. Move all fonts at the one location.",
   "main": "index.js",
-  "devDependencies": {
+  "dependencies": {
     "commander": "^2.14.1",
     "del": "^2.2.2",
-    "fs": "0.0.1-security",
     "fs-extra": "^5.0.0",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^3.1.1",

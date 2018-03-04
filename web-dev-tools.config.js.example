@@ -2,7 +2,6 @@
 module.exports = {
     tasks_dir: "./tasks",
     debug: false,
-    version: "3.1.0",
 
     sass: {
         command: "sass",
