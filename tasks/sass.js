@@ -1,3 +1,5 @@
+var sass = require("gulp-sass");
+
 module.exports = function (gulp, plugins, config) {
     return function () {
         var sources = [];
@@ -12,7 +14,7 @@ module.exports = function (gulp, plugins, config) {
                         this.emit("end");
                     }
                 }))
-                .pipe(plugins.sass())
+                .pipe(sass())
                 .pipe(plugins.autoprefixer())
                 .pipe(plugins.csscomb())
                 .pipe(plugins.mmq({

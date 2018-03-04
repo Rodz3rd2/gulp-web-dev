@@ -1,3 +1,5 @@
+var imagemin = require("gulp-imagemin");
+
 module.exports = function (gulp, plugins, config) {
     return function () {
         var sources = [];
@@ -6,7 +8,7 @@ module.exports = function (gulp, plugins, config) {
         }
 
         return gulp.src(sources)
-                .pipe(plugins.cache(plugins.imagemin({
+                .pipe(plugins.cache(imagemin({
                     interlaced: true
                 })))
                 .pipe(gulp.dest(config.build.dist + (config.build.images.dest !== "" ? "/" + config.build.images.dest : "")));

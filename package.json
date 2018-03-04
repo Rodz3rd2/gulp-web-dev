@@ -1,6 +1,6 @@
 {
   "name": "web-dev-tools",
-  "version": "3.1.6",
+  "version": "3.1.7",
   "description": "Tools for watching sass and js. Compress your css and js files. Optimize file size of images. Move all fonts at the one location.",
   "main": "index.js",
   "dependencies": {
@@ -45,5 +45,9 @@
   "bugs": {
     "url": "https://github.com/Rodz3rd2/gulp-web-dev/issues"
   },
-  "homepage": "https://github.com/Rodz3rd2/gulp-web-dev#readme"
+  "homepage": "https://github.com/Rodz3rd2/gulp-web-dev#readme",
+  "devDependencies": {
+    "gulp-imagemin": "^4.1.0",
+    "gulp-sass": "^3.1.0"
+  }
 }

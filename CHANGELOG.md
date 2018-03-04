@@ -1,3 +1,6 @@
+Version 3.1.7
+* Fix not calling plugins.sass and plugins.imagemin.
+
 Version 3.1.6
 * Install gulp-sass and gulp-imagemin separately because these packages require --unsafe-perm option.
 * Also to filter the it if you need to use sudo for linux or not for windows like the example below:
