@@ -1,3 +1,6 @@
+Version 3.2.0
+* Show result of deleting files.
+
 Version 3.1.8
 * Fix calling task.
 * Update README.md.

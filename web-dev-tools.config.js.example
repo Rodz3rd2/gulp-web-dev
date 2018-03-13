@@ -14,7 +14,7 @@ module.exports = {
         watch_command: "scripts:watch",
         dir: "app/src/js",
         dest: "app/js",
-        sources: ["**/*.js"]
+        sources: ["app.js"]
     },
 
     build: {

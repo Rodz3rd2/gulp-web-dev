@@ -14,9 +14,11 @@ module.exports = function (gulp, plugins, config) {
         {
             if (event.type === "deleted")
             {
-                var file = path.resolve('public/js', path.relative(path.resolve(config.scripts.dir), event.path));
+                var file = path.resolve(config.scripts.dest, path.relative(path.resolve(config.scripts.dir), event.path));
 
-                del.sync(file);
+                del([file]).then(paths => {
+                    console.log("Successfully deleted " + file);
+                });
             }
         });
     };

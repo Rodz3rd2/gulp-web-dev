@@ -2,6 +2,8 @@ var del = require("del");
 
 module.exports = function (gulp, plugins, config) {
     return function () {
-        del.sync(config.build.dist);
+        del([config.build.dist]).then(paths => {
+            console.log("Successfully deleted " + config.build.dist);
+        });
     };
 };
