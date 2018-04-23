@@ -17,7 +17,9 @@ module.exports = function (gulp, plugins, config) {
                 var file = path.resolve(config.sass.dest, path.relative(path.resolve(config.sass.dir), event.path));
                 var css_file = file.replace(".scss", ".css");
 
-                del.sync(css_file);
+                del([css_file]).then(paths => {
+                    console.log("Successfully deleted " + css_file);
+                });
             }
         });
     };

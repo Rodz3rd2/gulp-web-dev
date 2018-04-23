@@ -1,5 +1,8 @@
-Version 3.2
+Version 3.3
 * Add option flatten on command build:images and build:fonts.
+
+Version 3.2.0
+* Show result of deleting files.
 
 Version 3.1.8
 * Fix calling task.
