@@ -1,3 +1,6 @@
+Version 3.2
+* Add option flatten on command build:images and build:fonts.
+
 Version 3.1.8
 * Fix calling task.
 * Update README.md.

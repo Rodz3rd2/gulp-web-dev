@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-const VERSION = "3.1.8";
+const VERSION = "3.2";
 const PROJECT_PATH = process.cwd();
 
 var fse = require('fs-extra'),
