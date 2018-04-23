@@ -1,4 +1,4 @@
-# Web Tools Dev (v3.3)
+# Web Tools Dev (v3.3.0)
 Tools for watching sass and js. Compress your css and js files. Optimize file size of images. Move all fonts at the one location.
 
 ## Installation

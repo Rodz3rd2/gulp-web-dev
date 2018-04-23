@@ -1,4 +1,4 @@
-Version 3.3
+Version 3.3.0
 * Add option flatten on command build:images and build:fonts.
 
 Version 3.2.0
