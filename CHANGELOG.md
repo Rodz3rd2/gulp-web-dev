@@ -1,3 +1,6 @@
+Version 3.4.0
+* Use 'wdt' as bin command instead of whole name.
+
 Version 3.3.0
 * Add option flatten on command build:images and build:fonts.
 
