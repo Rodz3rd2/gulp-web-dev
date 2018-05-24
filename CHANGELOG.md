@@ -1,3 +1,6 @@
+Version 3.4.2
+* Remove sudo in command.
+
 Version 3.4.1
 * Include gulp-sass and gulp-imagemin inside of this project.
 * Just run npm install without sudo to avoid error.
