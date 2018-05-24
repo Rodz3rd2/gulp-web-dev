@@ -1,12 +1,8 @@
-# Web Tools Dev (v3.4.0)
+# Web Tools Dev (v3.4.1)
 Tools for watching sass and js. Compress your css and js files. Optimize file size of images. Move all fonts at the one location.
 
 ## Installation
  - Install development dependency inside of package.json using command `sudo npm install --save-dev web-dev-tools`.
- - Install `gulp-sass` and `gulp-imagemin` separately because these packages require `--unsafe-perm` option.
-   Also to filter the it if you need to use sudo for linux or not for windows like the example below:
-    - For linux `sudo npm install --save-dev --unsafe-perm gulp-sass gulp-imagemin`
-    - For Windows `npm install --save-dev --unsafe-perm gulp-sass gulp-imagemin`
  - Install `gulp-cli` and `npx` globally if it is not already installed in your computer.
 
 ## Setup

@@ -1,3 +1,7 @@
+Version 3.4.1
+* Include gulp-sass and gulp-imagemin inside of this project.
+* Just run npm install without sudo to avoid error.
+
 Version 3.4.0
 * Use 'wdt' as bin command instead of whole name.
 
