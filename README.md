@@ -2,7 +2,7 @@
 Tools for watching sass and js. Compress your css and js files. Optimize file size of images. Move all fonts at the one location.
 
 ## Installation
- - Install development dependency inside of package.json using command `sudo npm install --save-dev web-dev-tools`.
+ - Install development dependency inside of package.json using command `npm install --save-dev web-dev-tools`.
  - Install `gulp-cli` and `npx` globally if it is not already installed in your computer.
 
 ## Setup
