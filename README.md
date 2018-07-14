@@ -1,31 +1,35 @@
-# Web Tools Dev (v3.4.2)
-Tools for watching sass and js. Compress your css and js files. Optimize file size of images. Move all fonts at the one location.
+# web-dev-tools (v3.5.0)
+Minified your css and js files. Optimize file size of images. And auto compiling css and js during development.
 
 ## Installation
- - Install development dependency inside of package.json using command `npm install --save-dev web-dev-tools`.
- - Install `gulp-cli` and `npx` globally if it is not already installed in your computer.
-
-## Setup
- - First you need to create file `web-dev-tools.config.js` to setup the path. Use build in command `npx web-dev-tools init`.
- - Now check the available commands to know what can do of this library.
- - Follow the step in 'Example' section below to know how it works.
+ - Use `npm install --save-dev web-dev-tools` command in your terminal to install the dependency.
+ - Also `gulp-cli` must be installed in your computer. To do that, use `npm install -g gulp-cli`.
 
 ## Commands
- - `npx web-dev-tools [-h|--help]` - Show command list.
- - `npx web-dev-tools init` - Create file web-dev-tools.config.js.
- - `npx web-dev-tools sass` - Compile sass file to css file.
- - `npx web-dev-tools sass:watch` - Same of `npx web-dev-tools sass` but it will watch it. It will compile while you changing the sass file.
- - `npx web-dev-tools scripts` - Compile js file.
- - `npx web-dev-tools scripts:watch` - Same of `npx web-dev-tools scripts` but it will watch it.
- - `npx web-dev-tools build:views` - Build views, uglify css and js and move it in dist folder.
- - `npx web-dev-tools build:images` - Optimize the file size of image and move the output file in dist/img folder.
- - `npx web-dev-tools build:fonts` - Flatten the fonts and move it in dist/fonts folder.
+ - `node node_modules/.bin/wdt [-h|--help]` - Show command list.
+ - `node node_modules/.bin/wdt init` - Create file web-dev-tools.config.js.
+ - `node node_modules/.bin/wdt sass` - Compile sass file to css file.
+ - `node node_modules/.bin/wdt sass:watch` - Same of `node node_modules/.bin/wdt sass` but it will watch it. It will compile while you changing the sass file.
+ - `node node_modules/.bin/wdt scripts` - Compile js file.
+ - `node node_modules/.bin/wdt scripts:watch` - Same of `node node_modules/.bin/wdt scripts` but it will watch it.
+ - `node node_modules/.bin/wdt build:views` - Build views, uglify css and js and move it in dist folder.
+ - `node node_modules/.bin/wdt build:images` - Optimize the file size of image and move the output file in dist/img folder.
+ - `node node_modules/.bin/wdt build:fonts` - Flatten the fonts and move it in dist/fonts folder.
 
- - `npx web-dev-tools watch` - Run commands `npx web-dev-tools sass:watch` and `npx web-dev-tools scripts:watch`.
- - `npx web-dev-tools delete:dist` - Remove dist folder.
- - `npx web-dev-tools build:dist` - Run commands `npx web-dev-tools delete:dist`, `npx web-dev-tools sass`, `npx web-dev-tools scripts`, `npx web-dev-tools build:views`, `npx web-dev-tools build:images` and `npx web-dev-tools build:fonts`.
+ - `node node_modules/.bin/wdt watch` - Run commands `node node_modules/.bin/wdt sass:watch` and `node node_modules/.bin/wdt scripts:watch`.
+ - `node node_modules/.bin/wdt delete:dist` - Remove dist folder.
+ - `node node_modules/.bin/wdt build:dist` - Run commands `node node_modules/.bin/wdt delete:dist`, `node node_modules/.bin/wdt sass`, `node node_modules/.bin/wdt scripts`, `node node_modules/.bin/wdt build:views`, `node node_modules/.bin/wdt build:images` and `node node_modules/.bin/wdt build:fonts`.
+
+## Suggestion
+
+I suggest to install `npx` node package in your local machine to execute the command simple.
+
+Instead of for example `node node_modules/.bin/wdt watch`, you can achieve that with this very simple command `npx wdt watch`. Pretty cool ha!
 
 ## Example
+
+First you need to create file `web-dev-tools.config.js` to map the file path of your project. Use built in command `npx init`.
+
 Follow the folder structure of this project
 ```
 app/
@@ -93,11 +97,8 @@ p {
 }
 ```
 
-a.jpg
-- Just add image in app/src/img folder and name it a.jpg
-
-After all of those setup, run command `npx web-dev-tools build:dist`. It would be create dist folder.
-Test it by opening the dist/app.html in browser. That's it!.
+After of all boring stuff, run the command `npx build:dist`. It would be create dist folder.
+Test it by opening the dist/app.html in any browser. That's it!.
 
 ## LICENSE
-Web Dev Tools is released under the MIT Licence.
+web-dev-tools is released under the MIT Licence.

@@ -1,7 +1,7 @@
 {
   "name": "web-dev-tools",
-  "version": "3.4.2",
-  "description": "Tools for watching sass and js. Compress your css and js files. Optimize file size of images. Move all fonts at the one location.",
+  "version": "3.5.0",
+  "description": "Minified your css and js files. Optimize file size of images. And auto compiling css and js during development.",
   "main": "index.js",
   "dependencies": {
     "commander": "^2.14.1",
@@ -31,14 +31,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Rodz3rd2/gulp-web-dev.git"
+    "url": "git+https://github.com/rodrigoiii/web-dev-tools.git"
   },
   "keywords": [
-    "web-dev",
+    "minimization",
     "gulp",
-    "tools",
-    "compress",
-    "optimize"
+    "plugin",
+    "javascript"
   ],
   "author": "rodrigogalura3rd@gmail.com",
   "license": "MIT",
@@ -46,7 +45,7 @@
     "wdt": "./index.js"
   },
   "bugs": {
-    "url": "https://github.com/Rodz3rd2/gulp-web-dev/issues"
+    "url": "https://github.com/rodrigoiii/web-dev-tools/issues"
   },
-  "homepage": "https://github.com/Rodz3rd2/gulp-web-dev#readme"
+  "homepage": "https://github.com/rodrigoiii/web-dev-tools#readme"
 }
