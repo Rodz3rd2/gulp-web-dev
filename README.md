@@ -1,8 +1,8 @@
 # Sponge (v3.6.0)
 
-## What is Sponge?
+## What is Sponge Rod?
 
-Sponge is a tool to minified your css and js files and optimize file size of images.
+Sponge Rod is a tool to minified your css and js files and optimize file size of images.
 
 ## Installation
  - Use `npm install --save-dev sponge` command in your terminal to install the dependency.

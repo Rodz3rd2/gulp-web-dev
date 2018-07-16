@@ -1,7 +1,7 @@
 {
-  "name": "sponge",
+  "name": "sponge-rod",
   "version": "3.6.0",
-  "description": "Sponge is a tool to minified your css and js files and optimize file size of images.",
+  "description": "Sponge Rod is a tool to minified your css and js files and optimize file size of images.",
   "main": "index.js",
   "dependencies": {
     "commander": "^2.14.1",
