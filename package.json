@@ -42,7 +42,7 @@
   "author": "rodrigogalura3rd@gmail.com",
   "license": "MIT",
   "bin": {
-    "wdt": "./index.js"
+    "sponge": "./index.js"
   },
   "bugs": {
     "url": "https://github.com/rodrigoiii/sponge/issues"
