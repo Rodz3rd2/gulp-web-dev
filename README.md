@@ -1,13 +1,13 @@
-# web-dev-tools (v3.5.0)
+# sponge (v3.5.0)
 Minified your css and js files. Optimize file size of images. And auto compiling css and js during development.
 
 ## Installation
- - Use `npm install --save-dev web-dev-tools` command in your terminal to install the dependency.
+ - Use `npm install --save-dev sponge` command in your terminal to install the dependency.
  - Also `gulp-cli` must be installed in your computer. To do that, use `npm install -g gulp-cli`.
 
 ## Commands
  - `node node_modules/.bin/wdt [-h|--help]` - Show command list.
- - `node node_modules/.bin/wdt init` - Create file web-dev-tools.config.js.
+ - `node node_modules/.bin/wdt init` - Create file sponge.config.js.
  - `node node_modules/.bin/wdt sass` - Compile sass file to css file.
  - `node node_modules/.bin/wdt sass:watch` - Same of `node node_modules/.bin/wdt sass` but it will watch it. It will compile while you changing the sass file.
  - `node node_modules/.bin/wdt scripts` - Compile js file.
@@ -28,7 +28,7 @@ Instead of for example `node node_modules/.bin/wdt watch`, you can achieve that 
 
 ## Example
 
-First you need to create file `web-dev-tools.config.js` to map the file path of your project. Use built in command `npx init`.
+First you need to create file `sponge.config.js` to map the file path of your project. Use built in command `npx init`.
 
 Follow the folder structure of this project
 ```
@@ -101,4 +101,4 @@ After of all boring stuff, run the command `npx build:dist`. It would be create 
 Test it by opening the dist/app.html in any browser. That's it!.
 
 ## LICENSE
-web-dev-tools is released under the MIT Licence.
+sponge is released under the MIT Licence.

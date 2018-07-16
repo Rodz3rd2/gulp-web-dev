@@ -1,5 +1,5 @@
 var gulp = require("gulp"),
-    config = require(process.cwd() + "/web-dev-tools.config"),
+    config = require(process.cwd() + "/sponge.config"),
     plugins = require("gulp-load-plugins")({
         DEBUG: config.debug,
         rename: {

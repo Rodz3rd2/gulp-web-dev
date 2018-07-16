@@ -1,5 +1,8 @@
 # Change Logs
 
+sponge v3.6.0
+* Rename project to sponge.
+
 web-dev-tools v3.5.0
 * Update the README.md.
 * Update the wrong git url at package.json file.

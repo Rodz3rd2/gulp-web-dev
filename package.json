@@ -1,5 +1,5 @@
 {
-  "name": "web-dev-tools",
+  "name": "sponge",
   "version": "3.5.0",
   "description": "Minified your css and js files. Optimize file size of images. And auto compiling css and js during development.",
   "main": "index.js",
@@ -31,7 +31,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/rodrigoiii/web-dev-tools.git"
+    "url": "git+https://github.com/rodrigoiii/sponge.git"
   },
   "keywords": [
     "minimization",
@@ -45,7 +45,7 @@
     "wdt": "./index.js"
   },
   "bugs": {
-    "url": "https://github.com/rodrigoiii/web-dev-tools/issues"
+    "url": "https://github.com/rodrigoiii/sponge/issues"
   },
-  "homepage": "https://github.com/rodrigoiii/web-dev-tools#readme"
+  "homepage": "https://github.com/rodrigoiii/sponge#readme"
 }

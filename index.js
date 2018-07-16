@@ -11,11 +11,11 @@ var config, gulpfile;
 // init config command
 program
 .command('init')
-.description("Create file web-dev-tools.config.js.")
+.description("Create file sponge.config.js.")
 .action(function () {
     try {
-        if (fse.existsSync(PROJECT_PATH + "/web-dev-tools.config.js")) {
-            throw "web-dev-tools.config.js is already created.";
+        if (fse.existsSync(PROJECT_PATH + "/sponge.config.js")) {
+            throw "sponge.config.js is already created.";
         }
     } catch (err) {
         console.error(err);
@@ -23,8 +23,8 @@ program
     }
 
     try {
-        fse.copySync(__dirname + "/web-dev-tools.config.js.example", PROJECT_PATH + "/web-dev-tools.config.js");
-        console.log("Successfully created file web-dev-tools.config.js.");
+        fse.copySync(__dirname + "/sponge.config.js.example", PROJECT_PATH + "/sponge.config.js");
+        console.log("Successfully created file sponge.config.js.");
     } catch (err) {
         console.error(err);
     }
@@ -120,7 +120,7 @@ if (!includeConfigIfExist()) {
 function includeConfigIfExist()
 {
     try {
-        config = require(PROJECT_PATH + "/web-dev-tools.config");
+        config = require(PROJECT_PATH + "/sponge.config");
         gulpfile = require("./gulpfile");
         return true;
     } catch (err) {
