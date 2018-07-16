@@ -1,7 +1,7 @@
 {
   "name": "sponge",
   "version": "3.6.0",
-  "description": "Minified your css and js files. Optimize file size of images. And auto compiling css and js during development.",
+  "description": "Sponge is a tool to minified your css and js files and optimize file size of images.",
   "main": "index.js",
   "dependencies": {
     "commander": "^2.14.1",
