@@ -1,6 +1,6 @@
 {
   "name": "sponge",
-  "version": "3.5.0",
+  "version": "3.6.0",
   "description": "Minified your css and js files. Optimize file size of images. And auto compiling css and js during development.",
   "main": "index.js",
   "dependencies": {

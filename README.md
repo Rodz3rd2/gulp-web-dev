@@ -1,5 +1,8 @@
-# sponge (v3.5.0)
-Minified your css and js files. Optimize file size of images. And auto compiling css and js during development.
+# Sponge (v3.6.0)
+
+## What is Sponge?
+
+Sponge is a tool to minified your css and js files and optimize file size of images.
 
 ## Installation
  - Use `npm install --save-dev sponge` command in your terminal to install the dependency.
