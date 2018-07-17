@@ -16,7 +16,9 @@ module.exports = function (gulp, plugins, config) {
             result = result.pipe(plugins.flatten());
         }
 
-        result = result.pipe(gulp.dest(config.build.dist + (config.build.images.dest !== "" ? "/" + config.build.images.dest : "")));
+        result = result
+                .pipe(gulp.dest(config.build.dist + (config.build.images.dest !== "" ? "/" + config.build.images.dest : "")))
+                .on('end', config.build.images.callback);
 
         return result;
     };

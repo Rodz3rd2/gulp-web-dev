@@ -1,14 +1,14 @@
 var del  = require("del"),
     path = require('path');
 
-module.exports = function (gulp, plugins, config) {
-    return function () {
+module.exports = function (gulp, plugins, config, commands) {
+    return function() {
         var sources = [];
         for (var i in config.scripts.sources) {
             sources[i] = config.scripts.dir + "/" + config.scripts.sources[i];
         }
 
-        var js_watcher = gulp.watch(sources, [config.scripts.command]);
+        var js_watcher = gulp.watch(sources, [commands.scripts]);
 
         js_watcher.on('change', function (event)
         {

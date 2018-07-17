@@ -11,7 +11,9 @@ module.exports = function (gulp, plugins, config) {
             result = result.pipe(plugins.flatten());
         }
 
-        result = result.pipe(gulp.dest(config.build.dist + (config.build.fonts.dest !== "" ? "/" + config.build.fonts.dest : "")));
+        result = result
+                .pipe(gulp.dest(config.build.dist + (config.build.fonts.dest !== "" ? "/" + config.build.fonts.dest : "")))
+                .on('end', config.build.fonts.callback);
 
         return result;
     };

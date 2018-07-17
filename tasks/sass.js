@@ -1,7 +1,7 @@
 var sass = require("gulp-sass");
 
 module.exports = function (gulp, plugins, config) {
-    return function () {
+    return function() {
         var sources = [];
         for (var i in config.sass.sources) {
             sources[i] = config.sass.dir + "/" + config.sass.sources[i];
@@ -20,6 +20,7 @@ module.exports = function (gulp, plugins, config) {
                 .pipe(plugins.mmq({
                     log: true
                 }))
-                .pipe(gulp.dest(config.sass.dest));
-    };
+                .pipe(gulp.dest(config.sass.dest))
+                .on('end', config.sass.callback);
+            };
 };

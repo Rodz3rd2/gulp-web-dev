@@ -2,7 +2,7 @@
   "name": "sponge-rod",
   "version": "3.6.0",
   "description": "Sponge Rod is a tool to minified your css and js files and optimize file size of images.",
-  "main": "index.js",
+  "main": "app.js",
   "dependencies": {
     "commander": "^2.14.1",
     "del": "^2.2.2",
@@ -42,7 +42,7 @@
   "author": "rodrigogalura3rd@gmail.com",
   "license": "MIT",
   "bin": {
-    "sponge": "./index.js"
+    "sponge": "./cli.js"
   },
   "bugs": {
     "url": "https://github.com/rodrigoiii/sponge/issues"

@@ -1,14 +1,14 @@
 var del  = require("del"),
     path = require('path');
 
-module.exports = function (gulp, plugins, config) {
-    return function () {
+module.exports = function (gulp, plugins, config, commands) {
+    return function() {
         var sources = [];
         for (var i in config.sass.sources) {
             sources[i] = config.sass.dir + "/" + config.sass.sources[i];
         }
 
-        var sass_watcher = gulp.watch(sources, [config.sass.command]);
+        var sass_watcher = gulp.watch(sources, [commands.sass]);
 
         sass_watcher.on('change', function (event)
         {
@@ -22,5 +22,5 @@ module.exports = function (gulp, plugins, config) {
                 });
             }
         });
-    };
+    }
 };
