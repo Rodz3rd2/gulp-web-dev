@@ -1,29 +1,17 @@
-var imagemin = require("gulp-imagemin");
-
 module.exports = function (gulp, plugins, config) {
     return function () {
-        var sources = [];
-        for (var i in config.build.images.sources) {
-            sources[i] = config.build.images.dir + "/" + config.build.images.sources[i];
-        }
+        var options = (typeof config.build_images.options !== config.build_images.options) ? config.build_images.options : {};
 
-        var result = gulp.src(sources)
-                        .pipe(plugins.cache(imagemin({
-                            interlaced: true
-                        })));
-
-        if (config.build.images.flatten) {
-            result = result.pipe(plugins.flatten());
-        }
-
-        result = result
-                .pipe(gulp.dest(config.build.dist + (config.build.images.dest !== "" ? "/" + config.build.images.dest : "")))
+        return gulp.src(config.build_images.src, options)
+                .pipe(plugins.cache(plugins.imagemin({
+                    interlaced: true
+                })))
+                .pipe(plugins.if(config.build_images.use_flatten, plugins.flatten()))
+                .pipe(gulp.dest(config.build_images.dest))
                 .on('end', function() {
-                    if (typeof config.build.images.callback !== "undefined") {
-                        config.build.images.callback();
+                    if (typeof config.build_images.callback !== "undefined") {
+                        config.build_images.callback();
                     }
                 });
-
-        return result;
     };
 };

@@ -3,12 +3,9 @@ var named = require("vinyl-named"),
 
 module.exports = function (gulp, plugins, config) {
     return function () {
-        var sources = [];
-        for (var i in config.scripts.sources) {
-            sources[i] = config.scripts.dir + "/" + config.scripts.sources[i];
-        }
+        var options = (typeof config.scripts.options !== config.scripts.options) ? config.scripts.options : {};
 
-        return gulp.src(sources, {base: config.scripts.dir})
+        return gulp.src(config.scripts.src, options)
                 .pipe(plugins.plumber({
                     errorHandler: function (err) {
                         console.log(err);

@@ -3,12 +3,7 @@ var del  = require("del"),
 
 module.exports = function (gulp, plugins, config, commands) {
     return function() {
-        var sources = [];
-        for (var i in config.sass.sources) {
-            sources[i] = config.sass.dir + "/" + config.sass.sources[i];
-        }
-
-        var sass_watcher = gulp.watch(sources, [commands.sass]);
+        var sass_watcher = gulp.watch(config.sass.src, [commands.sass]);
 
         sass_watcher.on('change', function (event)
         {
@@ -22,5 +17,5 @@ module.exports = function (gulp, plugins, config, commands) {
                 });
             }
         });
-    }
+    };
 };

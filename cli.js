@@ -33,9 +33,8 @@ program
 
 // sass command
 program
-.version(VERSION)
 .command(commands.sass)
-.description("Compile sass file to css file.")
+.description("Compile the css file.")
 .action(function () {
     app.runGulpCommand(commands.sass);
 });
@@ -43,7 +42,7 @@ program
 // sass:watch command
 program
 .command(commands.sass_watch)
-.description("Same of `sass` but it will watch it. It will compile while you changing the sass file.")
+.description("Compile the css file on every changes of sass file.")
 .action(function () {
     app.runGulpCommand(commands.sass_watch);
 });
@@ -59,7 +58,7 @@ program
 // scripts:watch command
 program
 .command(commands.scripts_watch)
-.description("Same of `scripts` but it will watch it.")
+.description("Compile the js file on every changes of source js file.")
 .action(function () {
     app.runGulpCommand(commands.scripts_watch);
 });
@@ -67,7 +66,7 @@ program
 // watch command
 program
 .command('watch')
-.description("Run commands `sass:watch` and `scripts:watch`.")
+.description("Run commands `"+commands.sass+"` and `"+commands.scripts+"`.")
 .action(function () {
     app.runGulpCommand("watch");
 });
@@ -75,7 +74,7 @@ program
 // build:views command
 program
 .command(commands.build_views)
-.description("Build views, minify the css and js and move it in dist folder.")
+.description("Apply gulp-useref plugin and minify css and js files.")
 .action(function () {
     app.runGulpCommand(commands.build_views);
 });
@@ -83,7 +82,7 @@ program
 // build:images command
 program
 .command(commands.build_images)
-.description("Optimize the file size of image and move the output file in dist/img folder.")
+.description("Optimize the file size of image and move the output file in 'build_images destination' provided of config file.")
 .action(function () {
     app.runGulpCommand(commands.build_images);
 });
@@ -91,25 +90,40 @@ program
 // build:fonts command
 program
 .command(commands.build_fonts)
-.description("Flatten the fonts and move it in dist/fonts folder.")
+.description("Just move the fonts in `build_fonts destination` provided of config file.")
 .action(function () {
     app.runGulpCommand(commands.build_fonts);
 });
 
-// delete:dist command
+// unbuild command
 program
-.command(commands.unbuild_dist)
-.description("Remove the dist folder.")
+.command(commands.unbuild)
+.description("Remove the directory 'unbuild_dir' provided of config file.")
 .action(function () {
-    app.runGulpCommand(commands.unbuild_dist);
+    app.runGulpCommand(commands.unbuild);
 });
 
-// build:dist command
+// build command
 program
-.command(commands.build_dist)
-.description("\n\tRun commands in this order: \n\t* `delete:dist` \n\t* `sass` \n\t* `scripts` \n\t* `build:views`, `build:images` and * `build:fonts` in parallel.")
+.command(commands.build)
+.description("\n\tRun commands in this order: \n\t* `unbuild` \n\t* `sass` \n\t* `scripts` \n\t* `build:views`, `build:images` and * `build:fonts` in parallel.")
 .action(function () {
-    app.runGulpCommand(commands.build_dist);
+    app.runGulpCommand(commands.build);
+});
+
+program
+.version(VERSION, "-v, --version")
+.arguments('<cmd>')
+.action(function (cmd) {
+    command_input = cmd;
 });
 
 program.parse(process.argv);
+
+if (typeof command_input !== "undefined") {
+    // display friendly error output if command is not exist
+    if (!(command_input in commands)) {
+        console.error(command_input + " is not a valid command. Use --help to display available commands.");
+        process.exit(1);
+    }
+}

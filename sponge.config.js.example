@@ -2,60 +2,50 @@ module.exports = {
     debug: false,
 
     sass: {
-        command: "sass",
-        watch_command: "sass:watch",
-        dir: "app/src/sass",
-        dest: "app/css",
-        sources: ["**/*.scss"]
+        src: "app/src/sass/**/*.scss",
+        dest: "app/css"
     },
 
     scripts: {
-        command: "scripts",
-        watch_command: "scripts:watch",
-        dir: "app/src/js",
+        src: "app/src/js/**/*.js",
         dest: "app/js",
-        sources: ["app.js"]
     },
 
-    build: {
-        views: {
-            command: "build:views",
-            dir: "app",
-            sources: [
-                "**/*.html",
-                "**/*.twig"
-            ],
-            search_path: "app",
-            dest: ""
-        },
+    build_views: {
+        src: "app/**/*.html",
+        dest: "app/dist/app"
+    },
 
-        images: {
-            command: "build:images",
-            dir: "app/src/img",
-            flatten: true,
-            sources: [
-                "**/*.jpg",
-                "**/*.png",
-                "**/*.gif"
-            ],
-            dest: "img"
-        },
+    build_images: {
+        src: [
+            "app/img/**/*.jpg",
+            "app/img/**/*.png",
+            "app/img/**/*.gif",
+        ],
+        dest: "app/dist/app/img",
+        use_flatten: true
+    },
 
-        fonts: {
-            command: "build:fonts",
-            dir: "app",
-            flatten: true,
-            sources: [
-                "**/*.eot",
-                "**/*.svg",
-                "**/*.ttf",
-                "**/*.woff",
-                "**/*.woff2",
-                "**/*.otf"
-            ],
-            dest: "fonts"
-        },
+    build_fonts: {
+        src: [
+            "app/**/*.eot",
+            "app/**/*.svg",
+            "app/**/*.ttf",
+            "app/**/*.woff",
+            "app/**/*.woff2",
+            "app/**/*.otf"
+        ],
+        dest: "app/dist/app/fonts",
+        use_flatten: true
+    },
 
-        dist: "app/dist"
+    unbuild_dir: "app/dist",
+
+    build_callback: function() {
+        console.log("build callback");
+    },
+
+    unbuild_callback: function() {
+        console.log("unbuild callback");
     }
 };

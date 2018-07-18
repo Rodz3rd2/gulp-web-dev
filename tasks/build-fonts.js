@@ -1,24 +1,14 @@
 module.exports = function (gulp, plugins, config) {
     return function () {
-        var sources = [];
-        for (var i in config.build.fonts.sources) {
-            sources[i] = config.build.fonts.dir + "/" + config.build.fonts.sources[i];
-        }
+        var options = (typeof config.build_fonts.options !== config.build_fonts.options) ? config.build_fonts.options : {};
 
-        var result = gulp.src(sources);
-
-        if (config.build.fonts.flatten) {
-            result = result.pipe(plugins.flatten());
-        }
-
-        result = result
-                .pipe(gulp.dest(config.build.dist + (config.build.fonts.dest !== "" ? "/" + config.build.fonts.dest : "")))
+        return gulp.src(config.build_fonts.src, options)
+                .pipe(plugins.if(config.build_fonts.use_flatten, plugins.flatten()))
+                .pipe(gulp.dest(config.build_fonts.dest))
                 .on('end', function() {
-                    if (typeof config.build.fonts.callback !== "undefined") {
-                        config.build.fonts.callback();
+                    if (typeof config.build_fonts.callback !== "undefined") {
+                        config.build_fonts.callback();
                     }
                 });
-
-        return result;
     };
 };

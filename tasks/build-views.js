@@ -1,18 +1,15 @@
 module.exports = function (gulp, plugins, config) {
     return function () {
-        var sources = [];
-        for (var i in config.build.views.sources) {
-            sources[i] = config.build.views.dir + "/" + config.build.views.sources[i];
-        }
+        var options = (typeof config.build_views.options !== config.build_views.options) ? config.build_views.options : {};
 
-        return gulp.src(sources)
-                .pipe(plugins.useref({searchPath: config.build.views.search_path}))
+        return gulp.src(config.build_views.src, options)
+                .pipe(plugins.useref(config.build_views.useref_options))
                 .pipe(plugins.if('*.js', plugins.uglify()))
                 .pipe(plugins.if('*.css', plugins.cssnano()))
-                .pipe(gulp.dest(config.build.dist + (config.build.views.dest !== "" ? "/" + config.build.views.dest : "")))
+                .pipe(gulp.dest(config.build_views.dest))
                 .on('end', function() {
-                    if (typeof config.build.views.callback !== "undefined") {
-                        config.build.views.callback();
+                    if (typeof config.build_views.callback !== "undefined") {
+                        config.build_views.callback();
                     }
                 });
     };

@@ -3,12 +3,7 @@ var del  = require("del"),
 
 module.exports = function (gulp, plugins, config, commands) {
     return function() {
-        var sources = [];
-        for (var i in config.scripts.sources) {
-            sources[i] = config.scripts.dir + "/" + config.scripts.sources[i];
-        }
-
-        var js_watcher = gulp.watch(sources, [commands.scripts]);
+        var js_watcher = gulp.watch(config.scripts.src, [commands.scripts]);
 
         js_watcher.on('change', function (event)
         {

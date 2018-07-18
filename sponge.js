@@ -13,11 +13,11 @@ var commands = {
     scripts: typeof config.scripts.command !== "undefined" ? config.scripts.command : "scripts",
     scripts_watch: typeof config.scripts.watch_command !== "undefined" ? config.scripts.watch_command : "scripts:watch",
 
-    build_views: typeof config.build.views.command !== "undefined" ? config.build.views.command : "build:views",
-    build_images: typeof config.build.images.command !== "undefined" ? config.build.images.command : "build:images",
-    build_fonts: typeof config.build.fonts.command !== "undefined" ? config.build.fonts.command : "build:fonts",
-    build_dist: typeof config.build.command !== "undefined" ? config.build.command : "build:dist",
-    unbuild_dist: typeof config.unbuild.command !== "undefined" ? config.unbuild.command : "unbuild:dist"
+    build_views: typeof config.build_views.command !== "undefined" ? config.build_views.command : "build:views",
+    build_images: typeof config.build_images.command !== "undefined" ? config.build_images.command : "build:images",
+    build_fonts: typeof config.build_fonts.command !== "undefined" ? config.build_fonts.command : "build:fonts",
+    build: "build",
+    unbuild: "unbuild"
 };
 
 function getTask(task)
@@ -35,8 +35,8 @@ gulp.task("watch", [commands.sass_watch, commands.scripts_watch], function () {}
 gulp.task(commands.build_views, getTask("build-views"));
 gulp.task(commands.build_images, getTask("build-images"));
 gulp.task(commands.build_fonts, getTask("build-fonts"));
-gulp.task(commands.build_dist, getTask("build-dist"));
-gulp.task(commands.unbuild_dist, getTask("unbuild-dist"));
+gulp.task(commands.build, getTask("build"));
+gulp.task(commands.unbuild, getTask("unbuild"));
 
 module.exports = {
     commands: commands,

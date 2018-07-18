@@ -1,20 +1,15 @@
-var sass = require("gulp-sass");
-
 module.exports = function (gulp, plugins, config) {
     return function() {
-        var sources = [];
-        for (var i in config.sass.sources) {
-            sources[i] = config.sass.dir + "/" + config.sass.sources[i];
-        }
+        var options = (typeof config.sass.options !== config.sass.options) ? config.sass.options : {};
 
-        return gulp.src(sources, {base: config.sass.dir})
+        return gulp.src(config.sass.src, options)
                 .pipe(plugins.plumber({
                     errorHandler: function (err) {
                         console.log(err);
                         this.emit("end");
                     }
                 }))
-                .pipe(sass())
+                .pipe(plugins.sass())
                 .pipe(plugins.autoprefixer())
                 .pipe(plugins.csscomb())
                 .pipe(plugins.mmq({
@@ -26,5 +21,5 @@ module.exports = function (gulp, plugins, config) {
                         config.sass.callback();
                     }
                 });
-            };
+    };
 };
