@@ -1,6 +1,6 @@
 {
   "name": "sponge-rod",
-  "version": "3.7.0",
+  "version": "3.7.1",
   "description": "Sponge Rod is a cli tool that change your development work flow.",
   "main": "sponge.js",
   "dependencies": {

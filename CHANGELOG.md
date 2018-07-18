@@ -1,5 +1,8 @@
 # Change Logs
 
+Sponge Rod v3.7.1
+* Patch bugs
+
 Sponge Rod v3.7.0
 * Update README
 * Update sponge config
