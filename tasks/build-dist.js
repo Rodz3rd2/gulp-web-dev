@@ -10,7 +10,11 @@ module.exports = function (gulp, plugins, config, commands) {
                 commands.build_images,
                 commands.build_fonts
             ],
-            config.build.callback
+            function() {
+                if (typeof config.build.callback !== "undefined") {
+                    config.build.callback();
+                }
+            }
         );
     };
 };

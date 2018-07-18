@@ -13,7 +13,11 @@ module.exports = function (gulp, plugins, config) {
 
         result = result
                 .pipe(gulp.dest(config.build.dist + (config.build.fonts.dest !== "" ? "/" + config.build.fonts.dest : "")))
-                .on('end', config.build.fonts.callback);
+                .on('end', function() {
+                    if (typeof config.build.fonts.callback !== "undefined") {
+                        config.build.fonts.callback();
+                    }
+                });
 
         return result;
     };

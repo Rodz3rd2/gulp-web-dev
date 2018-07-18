@@ -21,6 +21,10 @@ module.exports = function (gulp, plugins, config) {
                     log: true
                 }))
                 .pipe(gulp.dest(config.sass.dest))
-                .on('end', config.sass.callback);
+                .on('end', function() {
+                    if (typeof config.sass.callback !== "undefined") {
+                        config.sass.callback();
+                    }
+                });
             };
 };

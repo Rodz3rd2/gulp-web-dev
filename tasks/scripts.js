@@ -18,6 +18,10 @@ module.exports = function (gulp, plugins, config) {
                 .pipe(named())
                 .pipe(webpack())
                 .pipe(gulp.dest(config.scripts.dest))
-                .on('end', config.scripts.callback);
+                .on('end', function() {
+                    if (typeof config.scripts.callback !== "undefined") {
+                        config.scripts.callback();
+                    }
+                });
     };
 };

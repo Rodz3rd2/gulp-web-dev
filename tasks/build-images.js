@@ -18,7 +18,11 @@ module.exports = function (gulp, plugins, config) {
 
         result = result
                 .pipe(gulp.dest(config.build.dist + (config.build.images.dest !== "" ? "/" + config.build.images.dest : "")))
-                .on('end', config.build.images.callback);
+                .on('end', function() {
+                    if (typeof config.build.images.callback !== "undefined") {
+                        config.build.images.callback();
+                    }
+                });
 
         return result;
     };

@@ -10,6 +10,10 @@ module.exports = function (gulp, plugins, config) {
                 .pipe(plugins.if('*.js', plugins.uglify()))
                 .pipe(plugins.if('*.css', plugins.cssnano()))
                 .pipe(gulp.dest(config.build.dist + (config.build.views.dest !== "" ? "/" + config.build.views.dest : "")))
-                .on('end', config.build.views.callback);
+                .on('end', function() {
+                    if (typeof config.build.views.callback !== "undefined") {
+                        config.build.views.callback();
+                    }
+                });
     };
 };
