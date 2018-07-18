@@ -6,30 +6,26 @@ const PROJECT_PATH = process.cwd();
 var fse = require('fs-extra'),
     program = require("commander");
 
+if (!fse.existsSync(PROJECT_PATH + "/sponge.config.js")) {
+    // init config command
+    program
+    .command('init')
+    .description("Create file sponge.config.js.")
+    .action(function () {
+        try {
+            fse.copySync(__dirname + "/sponge.config.js.example", PROJECT_PATH + "/sponge.config.js");
+            console.log("Successfully created file sponge.config.js.");
+        } catch (err) {
+            console.error(err);
+        }
+    });
+
+    program.parse(process.argv);
+    process.exit(1);
+}
+
 var app = require("./sponge"),
     commands = app.commands;
-
-// init config command
-program
-.command('init')
-.description("Create file sponge.config.js.")
-.action(function () {
-    try {
-        if (fse.existsSync(PROJECT_PATH + "/sponge.config.js")) {
-            throw "sponge.config.js is already created.";
-        }
-    } catch (err) {
-        console.error(err);
-        process.exit(1);
-    }
-
-    try {
-        fse.copySync(__dirname + "/sponge.config.js.example", PROJECT_PATH + "/sponge.config.js");
-        console.log("Successfully created file sponge.config.js.");
-    } catch (err) {
-        console.error(err);
-    }
-});
 
 // sass command
 program
