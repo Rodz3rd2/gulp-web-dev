@@ -25,7 +25,6 @@ function getTask(task)
     return require(__dirname + "/tasks/" + task)(gulp, plugins, config, commands);
 }
 
-
 gulp.task(commands.sass, getTask("sass"));
 gulp.task(commands.scripts, getTask("scripts"));
 gulp.task(commands.sass_watch, [commands.sass], getTask('sass-watch'));

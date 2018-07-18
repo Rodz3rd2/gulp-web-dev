@@ -1,6 +1,11 @@
 # Change Logs
 
-sponge-rod v3.6.0
+Sponge Rod v3.7.0
+* Update README
+* Update sponge config
+* Clean the code
+
+Sponge Rod v3.6.0
 * Rename project to sponge-rod.
 
 web-dev-tools v3.5.0
