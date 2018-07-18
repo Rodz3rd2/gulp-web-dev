@@ -1,5 +1,8 @@
 # Change Logs
 
+Sponge Rod v3.7.2
+* Support array on unbuild_dir.
+
 Sponge Rod v3.7.1
 * Patch bugs
 
