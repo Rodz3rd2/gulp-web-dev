@@ -1,8 +1,8 @@
-# Sponge Rod (v3.7.2)
+# Sponge Rod (v3.8.0)
 
 ## What is Sponge Rod?
 
-Sponge Rod is a cli tool that change your development work flow. What? Read the [features](https://github.com/rodrigoiii/sponge-rod#features) instead.
+Sponge Rod is a cli tool that build your assets css, js and images.
 
 ## Installation
  - Use `npm install --save-dev sponge` command in your terminal to install the dependency.
@@ -35,7 +35,7 @@ Instead of for example `node node_modules/.bin/sponge watch`, you can achieve th
  - It used webpack comes from `webpack-stream` plugin.
  - It decrease the file size of images without change the quality.
 
-## Sponge config options
+## Sponge Rod configuration schema.
 
 #### sass
  - `callback`[function] - This will be trigger after the sass command execute.
@@ -48,6 +48,7 @@ Instead of for example `node node_modules/.bin/sponge watch`, you can achieve th
  - `options`[object] - The option of `gulp.src` function.
  - `command`[string] - It would override the `scripts` command.
  - `watch_command`[string] - It would override the `scripts:watch` command.
+ - `watch_only`[string] - It is glob format. This is useful if you want to watch the file but not compiling.
 
 #### build_views
  - `callback`[function] - This will be trigger after the build:views command execute.
@@ -66,7 +67,7 @@ Instead of for example `node node_modules/.bin/sponge watch`, you can achieve th
 
 ## Example
 
-Checkout the [example](https://github.com/rodrigoiii/sponge-rod/blob/master/app) and test it in you local machine.
+Checkout the [example](https://github.com/rodrigoiii/sponge-rod/blob/master/app) and test it in your local machine.
 
 ## LICENSE
 Sponge Rod is released under the MIT Licence.
