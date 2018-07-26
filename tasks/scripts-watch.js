@@ -16,5 +16,9 @@ module.exports = function (gulp, plugins, config, commands) {
                 });
             }
         });
+
+        if (typeof config.scripts.watch_only !== "undefined") {
+            gulp.watch(config.scripts.watch_only, [commands.scripts]);
+        }
     };
 };
