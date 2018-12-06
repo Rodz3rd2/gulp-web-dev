@@ -1,7 +1,7 @@
 var del  = require("del"),
-    path = require('path');
-
-var globParent = require('glob-parent');
+    path = require('path'),
+    globParent = require('glob-parent'),
+    notifier = require("node-notifier");
 
 module.exports = function (gulp, plugins, config, commands) {
     return function() {

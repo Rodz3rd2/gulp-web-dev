@@ -1,9 +1,8 @@
 var compiler = require("webpack"),
     webpack_stream = require("webpack-stream"),
-
     path = require("path"),
-
-    _ = require("underscore");
+    _ = require("underscore"),
+    notifier = require("node-notifier");
 
 module.exports = function (gulp, plugins, config) {
     return function () {
@@ -33,6 +32,11 @@ module.exports = function (gulp, plugins, config) {
                     if (typeof config.scripts.callback !== "undefined") {
                         config.scripts.callback();
                     }
+
+                    notifier.notify({
+                        title: "Sponge Rod",
+                        message: "Compile js files completed!"
+                    });
                 });
     };
 };

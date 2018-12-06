@@ -1,4 +1,5 @@
-var _ = require("underscore");
+var _ = require("underscore"),
+    notifier = require("node-notifier");
 
 module.exports = function (gulp, plugins, config) {
     return function() {
@@ -22,6 +23,11 @@ module.exports = function (gulp, plugins, config) {
                     if (typeof config.sass.callback !== "undefined") {
                         config.sass.callback();
                     }
+
+                    notifier.notify({
+                        title: "Sponge Rod",
+                        message: "Compile sass files completed!"
+                    });
                 });
     };
 };

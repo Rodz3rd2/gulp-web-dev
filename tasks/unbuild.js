@@ -1,4 +1,5 @@
-var del = require("del");
+var del = require("del"),
+    notifier = require("node-notifier");
 
 module.exports = function (gulp, plugins, config) {
     return function () {
@@ -9,6 +10,11 @@ module.exports = function (gulp, plugins, config) {
             {
                 config.unbuild_callback();
             }
+
+            notifier.notify({
+                title: "Sponge Rod",
+                message: "Unbuild files completed!"
+            });
         });
     };
 };
