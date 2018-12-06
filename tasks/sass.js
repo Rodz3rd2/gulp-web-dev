@@ -1,8 +1,10 @@
+var _ = require("underscore");
+
 module.exports = function (gulp, plugins, config) {
     return function() {
         var options = (typeof config.sass.options !== config.sass.options) ? config.sass.options : {};
 
-        return gulp.src(config.sass.src, options)
+        return gulp.src(config.sass.src, _.extend({allowEmpty: true}, options))
                 .pipe(plugins.plumber({
                     errorHandler: function (err) {
                         console.log(err);
