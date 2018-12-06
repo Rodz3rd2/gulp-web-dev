@@ -1,9 +1,13 @@
 var del  = require("del"),
-    path = require('path');
+    path = require('path'),
+
+    _ = require("underscore");
 
 module.exports = function (gulp, plugins, config, commands) {
     return function() {
-        var js_watcher = gulp.watch(config.scripts.src, [commands.scripts]);
+        var js_watcher = gulp.watch(_.map(_.values(config.scripts.entries), function(entry) {
+                            return "./" + entry;
+                        }), [commands.scripts]);
 
         js_watcher.on('change', function (event)
         {
@@ -16,9 +20,5 @@ module.exports = function (gulp, plugins, config, commands) {
                 });
             }
         });
-
-        if (typeof config.scripts.watch_only !== "undefined") {
-            gulp.watch(config.scripts.watch_only, [commands.scripts]);
-        }
     };
 };

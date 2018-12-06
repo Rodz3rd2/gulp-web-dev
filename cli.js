@@ -1,19 +1,17 @@
 #!/usr/bin/env node
-
-const VERSION = "3.8.0";
-const PROJECT_PATH = process.cwd();
+var VERSION = "3.8.0";
 
 var fse = require('fs-extra'),
     program = require("commander");
 
-if (!fse.existsSync(PROJECT_PATH + "/sponge.config.js")) {
+if (!fse.existsSync(process.cwd() + "/sponge.config.js")) {
     // init config command
     program
     .command('init')
     .description("Create file sponge.config.js.")
     .action(function () {
         try {
-            fse.copySync(__dirname + "/sponge.config.js.example", PROJECT_PATH + "/sponge.config.js");
+            fse.copySync(__dirname + "/sponge.config.js.example", process.cwd() + "/sponge.config.js");
             console.log("Successfully created file sponge.config.js.");
         } catch (err) {
             console.error(err);

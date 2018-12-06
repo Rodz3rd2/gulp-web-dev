@@ -7,7 +7,10 @@ module.exports = {
     },
 
     scripts: {
-        src: "app/src/js/**/*.js",
+        entries: {
+            "app": "app/src/js/app.js",
+            "app2": "app/src/js/app2.js"
+        },
         dest: "app/js",
     },
 
