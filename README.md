@@ -1,4 +1,4 @@
-# Sponge Rod (v3.8.0)
+# Sponge Rod (v3.9.0)
 
 ## What is Sponge Rod?
 
@@ -37,33 +37,69 @@ Instead of for example `node node_modules/.bin/sponge watch`, you can achieve th
 
 ## Sponge Rod configuration schema.
 
-#### sass
+### sass
+
+##### Required
+ - `src`[array|string] - Source files to be compiled.
+ - `dest`[string] - Output destination.
+
+##### Optional
  - `callback`[function] - This will be trigger after the sass command execute.
- - `options`[object] - The option of `gulp.src` function.
+ - `options`[json] - The option of `gulp.src` function.
  - `command`[string] - It would override the `sass` command.
  - `watch_command`[string] - It would override the `sass:watch` command.
+ - `notify`[boolean] - Show toast message after sass command task completed.
 
-#### scripts
+### scripts
+
+##### Required
+ - `entries`[json] - Key is to be filename and the source file to be compiled.
+ - `dest`[string] - Output destination.
+
+##### Optional
  - `callback`[function] - This will be trigger after the scripts command execute.
- - `options`[object] - The option of `gulp.src` function.
+ - `options`[json] - The option of `gulp.src` function.
  - `command`[string] - It would override the `scripts` command.
  - `watch_command`[string] - It would override the `scripts:watch` command.
- - `watch_only`[string] - It is glob format. This is useful if you want to watch the file but not compiling.
+ - `notify`[boolean] - Show toast message after scripts command task completed.
 
-#### build_views
+### build_views
+
+##### Required
+ - `src`[array|string] - Source files to be compiled.
+ - `dest`[string] - Output destination.
+
+##### Optional
  - `callback`[function] - This will be trigger after the build:views command execute.
- - `options`[object] - The option of `gulp.src` function.
+ - `options`[json] - The option of `gulp.src` function.
  - `command`[string] - It would override the `build:views` command.
+ - `notify`[boolean] - Show toast message after build:views command task completed.
 
-#### build_images
+### build_images
+
+##### Required
+ - `src`[array|string] - Source files to be compiled.
+ - `dest`[string] - Output destination.
+
+##### Optional
  - `callback`[function] - This will be trigger after the build:images command execute.
- - `options`[object] - The option of `gulp.src` function.
+ - `options`[json] - The option of `gulp.src` function.
  - `command`[string] - It would override the `build:images` command.
+ - `use_flatten`[boolean] - Make the output files flatten.
+ - `notify`[boolean] - Show toast message after build:images command task completed.
 
-#### build_fonts
+### build_fonts
+
+##### Required
+ - `src`[array|string] - Source files to be compiled.
+ - `dest`[string] - Output destination.
+
+##### Optional
  - `callback`[function] - This will be trigger after the build:fonts command execute.
- - `options`[object] - The option of `gulp.src` function.
+ - `options`[json] - The option of `gulp.src` function.
  - `command`[string] - It would override the `build:fonts` command.
+ - `use_flatten`[boolean] - Make the output files flatten.
+ - `notify`[boolean] - Show toast message after build:fonts command task completed.
 
 ## Example
 

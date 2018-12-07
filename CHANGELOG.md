@@ -1,5 +1,11 @@
 # Change Logs
 
+## Version 3.9.0
+ - Add node notifier to display message after the task process completed.
+ - Remove sync delete compile file.
+ - Remove src option in scripts and change to entries(webpack).
+ - Remove unbuild_dir, and change to unbuild.
+
 ## Version 3.8.0 - July 26, 2018
  - Add option watch_only for scripts.
  - Update README.md
