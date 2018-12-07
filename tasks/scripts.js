@@ -1,6 +1,5 @@
 var compiler = require("webpack"),
     webpack_stream = require("webpack-stream"),
-    path = require("path"),
     _ = require("underscore"),
     notifier = require("node-notifier");
 

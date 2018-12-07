@@ -12,6 +12,9 @@ module.exports = {
             "app2": "app/src/js/app2.js"
         },
         dest: "app/js",
+        options: {
+            base: "app/src/js"
+        },
     },
 
     build_views: {
@@ -42,7 +45,9 @@ module.exports = {
         use_flatten: true
     },
 
-    unbuild_dir: "app/dist",
+    unbuild: {
+        dir: "app/dist"
+    },
 
     build_callback: function() {
         console.log("build callback");
