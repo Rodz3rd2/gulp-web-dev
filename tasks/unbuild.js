@@ -8,18 +8,21 @@ module.exports = function (gulp, plugins, config) {
         var notify = typeof config.unbuild.notify !== "undefined" ? config.unbuild.notify : false;
 
         del(config.unbuild.dir).then(paths => {
-            console.log(RED, paths.join("\n") + " deleted");
+            if (paths.length > 0) {
+                console.log(RED, paths.join("\n") + " deleted");
 
-            if (typeof config.unbuild_callback !== "undefined")
-            {
-                config.unbuild_callback();
-            }
+                if (typeof config.unbuild !== "undefined") {
+                    if (typeof config.unbuild.callback !== "undefined") {
+                        config.unbuild.callback();
+                    }
+                }
 
-            if (notify) {
-                notifier.notify({
-                    title: "Sponge Rod",
-                    message: "Unbuild files completed!"
-                });
+                if (notify) {
+                    notifier.notify({
+                        title: "Sponge Rod",
+                        message: "Unbuild files completed!"
+                    });
+                }
             }
         });
     };

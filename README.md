@@ -1,4 +1,4 @@
-# Sponge Rod (v3.9.0)
+# Sponge Rod (v3.9.1)
 
 ## What is Sponge Rod?
 
@@ -100,6 +100,19 @@ Instead of for example `node node_modules/.bin/sponge watch`, you can achieve th
  - `command`[string] - It would override the `build:fonts` command.
  - `use_flatten`[boolean] - Make the output files flatten.
  - `notify`[boolean] - Show toast message after build:fonts command task completed.
+
+### build
+
+##### Optional
+ - `callback`[function] - To be call after build task completed.
+ - `notify`[boolean] - Show toast message after build command task completed.
+
+### unbuild
+
+##### Optional
+ - `dir`[string|glob] - Files or directory to be delete.
+ - `callback`[function] - To be call after unbuild task completed.
+ - `notify`[boolean] - Show toast message after unbuild command task completed.
 
 ## Example
 

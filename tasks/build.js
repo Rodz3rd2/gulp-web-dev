@@ -19,8 +19,10 @@ module.exports = function (gulp, plugins, config, commands) {
                 commands.build_fonts
             ],
             function() {
-                if (typeof config.build_callback !== "undefined") {
-                    config.build_callback();
+                if (typeof config.build !== "undefined") {
+                    if (typeof config.build.callback !== "undefined") {
+                        config.build.callback();
+                    }
                 }
 
                 if (notify) {

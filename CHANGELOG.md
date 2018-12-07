@@ -1,5 +1,10 @@
 # Change Logs
 
+## Version 3.9.1
+ - Update README.md
+ - Remove fonts and remain one.
+ - Enhance build and unbuild schema.
+
 ## Version 3.9.0
  - Add node notifier to display message after the task process completed.
  - Remove sync delete compile file.

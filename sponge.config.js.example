@@ -3,7 +3,7 @@ module.exports = {
 
     sass: {
         src: "app/src/sass/**/*.scss",
-        dest: "app/css"
+        dest: "app/css",
     },
 
     scripts: {
@@ -29,7 +29,7 @@ module.exports = {
             "app/img/**/*.gif",
         ],
         dest: "app/dist/app/img",
-        use_flatten: true
+        use_flatten: false
     },
 
     build_fonts: {
@@ -45,15 +45,16 @@ module.exports = {
         use_flatten: true
     },
 
+    build: {
+        callback: function() {
+            console.log("build callback");
+        }
+    },
+
     unbuild: {
-        dir: "app/dist"
-    },
-
-    build_callback: function() {
-        console.log("build callback");
-    },
-
-    unbuild_callback: function() {
-        console.log("unbuild callback");
+        dir: "app/dist",
+        callback: function() {
+            console.log("unbuild callback");
+        }
     }
 };
