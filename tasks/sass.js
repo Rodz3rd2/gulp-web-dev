@@ -4,6 +4,7 @@ var _ = require("underscore"),
 module.exports = function (gulp, plugins, config) {
     return function() {
         var options = (typeof config.sass.options !== config.sass.options) ? config.sass.options : {};
+        var notify = typeof config.sass.notify !== "undefined" ? config.sass.notify : true;
 
         return gulp.src(config.sass.src, _.extend({allowEmpty: true}, options))
                 .pipe(plugins.plumber({
@@ -24,10 +25,12 @@ module.exports = function (gulp, plugins, config) {
                         config.sass.callback();
                     }
 
-                    notifier.notify({
-                        title: "Sponge Rod",
-                        message: "Compile sass files completed!"
-                    });
+                    if (notify) {
+                        notifier.notify({
+                            title: "Sponge Rod",
+                            message: "Compile sass files completed!"
+                        });
+                    }
                 });
     };
 };

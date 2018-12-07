@@ -3,7 +3,12 @@ var runSequence = require("run-sequence"),
 
 module.exports = function (gulp, plugins, config, commands) {
     return function () {
-        var notify = typeof config.build_views.notify !== "undefined" ? config.build_views.notify : false;
+        var notify = false;
+        if (typeof config.build !== "undefined") {
+            if (typeof config.build.notify !== "undefined") {
+                notify = config.build.notify;
+            }
+        }
 
         runSequence(commands.unbuild,
             commands.sass,

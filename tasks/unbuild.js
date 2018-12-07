@@ -3,7 +3,9 @@ var del = require("del"),
 
 module.exports = function (gulp, plugins, config) {
     return function () {
-        del(config.unbuild_dir).then(paths => {
+        var notify = typeof config.unbuild.notify !== "undefined" ? config.unbuild.notify : false;
+
+        del(config.unbuild.dir).then(paths => {
             console.log("Files deleted:\n" + paths.join("\n"));
 
             if (typeof config.unbuild_callback !== "undefined")
@@ -11,10 +13,12 @@ module.exports = function (gulp, plugins, config) {
                 config.unbuild_callback();
             }
 
-            notifier.notify({
-                title: "Sponge Rod",
-                message: "Unbuild files completed!"
-            });
+            if (notify) {
+                notifier.notify({
+                    title: "Sponge Rod",
+                    message: "Unbuild files completed!"
+                });
+            }
         });
     };
 };

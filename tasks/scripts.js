@@ -7,6 +7,7 @@ var compiler = require("webpack"),
 module.exports = function (gulp, plugins, config) {
     return function () {
         var options = (typeof config.scripts.options !== config.scripts.options) ? config.scripts.options : {};
+        var notify = typeof config.scripts.notify !== "undefined" ? config.scripts.notify : true;
 
         return gulp.src("dummy-entry.js", _.extend({allowEmpty: true}, options))
                 .pipe(plugins.plumber({
@@ -33,10 +34,12 @@ module.exports = function (gulp, plugins, config) {
                         config.scripts.callback();
                     }
 
-                    notifier.notify({
-                        title: "Sponge Rod",
-                        message: "Compile js files completed!"
-                    });
+                    if (notify) {
+                        notifier.notify({
+                            title: "Sponge Rod",
+                            message: "Compile js files completed!"
+                        });
+                    }
                 });
     };
 };
