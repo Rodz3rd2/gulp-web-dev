@@ -3,7 +3,7 @@ module.exports = {
 
     sass: {
         src: "app/src/sass/**/*.scss",
-        dest: "app/css",
+        dest: "app/css"
     },
 
     scripts: {
@@ -14,7 +14,7 @@ module.exports = {
         dest: "app/js",
         options: {
             base: "app/src/js"
-        },
+        }
     },
 
     build_views: {
@@ -26,7 +26,7 @@ module.exports = {
         src: [
             "app/img/**/*.jpg",
             "app/img/**/*.png",
-            "app/img/**/*.gif",
+            "app/img/**/*.gif"
         ],
         dest: "app/dist/app/img",
         use_flatten: false

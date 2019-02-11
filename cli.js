@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-var VERSION = "3.9.1";
+var VERSION = "3.9.2";
 
 var fse = require('fs-extra'),
     program = require("commander");

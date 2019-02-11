@@ -1,5 +1,8 @@
 # Change Logs
 
+## Version 3.9.2
+ - Fix not watching file.
+
 ## Version 3.9.1
  - Update README.md
  - Remove fonts and remain one.

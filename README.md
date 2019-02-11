@@ -1,4 +1,4 @@
-# Sponge Rod (v3.9.1)
+# Sponge Rod
 
 ## What is Sponge Rod?
 
