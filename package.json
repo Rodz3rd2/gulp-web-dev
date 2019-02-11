@@ -6,7 +6,6 @@
   "dependencies": {
     "commander": "^2.14.1",
     "del": "^2.2.2",
-    "event-stream": "^3.3.4",
     "fs-extra": "^5.0.0",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^3.1.1",
@@ -21,7 +20,7 @@
     "gulp-plumber": "^1.1.0",
     "gulp-sass": "^3.1.0",
     "gulp-uglify": "^2.1.2",
-    "gulp-useref": "^3.1.2",
+    "gulp-useref": "3.1.5",
     "node-notifier": "^5.3.0",
     "run-sequence": "^1.2.2",
     "underscore": "^1.9.1",
