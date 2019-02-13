@@ -1,5 +1,8 @@
 # Change Logs
 
+## Version 3.10.1
+ - Fix vulnerability of package.
+
 ## Version 3.10.0
  - Add two option in scripts which are entries_object(object) and entries_array(array)
  - Remove entries option
