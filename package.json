@@ -6,7 +6,7 @@
   "dependencies": {
     "commander": "^2.14.1",
     "del": "^2.2.2",
-    "event-stream": "^3.3.4",
+    "event-stream": "3.3.4",
     "fs-extra": "^5.0.0",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^3.1.1",
