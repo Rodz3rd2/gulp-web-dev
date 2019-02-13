@@ -1,5 +1,9 @@
 # Change Logs
 
+## Version 3.10.0
+ - Add two option in scripts which are entries_object(object) and entries_array(array)
+ - Remove entries option
+
 ## Version 3.9.2
  - Fix not watching file.
 
